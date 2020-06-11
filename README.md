@@ -1,2 +1,2 @@
-# scitoy-learn
-利用python实现scikit-learn的主要功能
+# light-sklearn
+用python实作sklearn的部分主要功能
