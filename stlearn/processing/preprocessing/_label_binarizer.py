@@ -10,7 +10,7 @@ class LabelBinarizer(BasePreprocessor):
 
     def fit(self, x):
         self._check_type(x)
-        self.classes_ = np.array(list(set(list(x))))
+        self.classes_ = np.unique(list(x))
         return self
 
     def transform(self, x):
