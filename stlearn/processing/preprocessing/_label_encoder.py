@@ -8,7 +8,7 @@ class LabelEncoder(BasePreprocessor):
 
     def fit(self, x):
         self._check_type(x)
-        self.classes_ = np.unique(list(x))
+        self.classes_ = np.unique(x)
         return self
 
     def transform(self, x):
