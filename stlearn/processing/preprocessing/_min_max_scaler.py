@@ -2,6 +2,7 @@ from stlearn.base import BasePreprocessor
 
 import numpy as np
 
+
 class MinMaxScaler(BasePreprocessor):
     def __init__(self, feature_range=(0, 1)):
         self.feature_range = feature_range
@@ -48,6 +49,7 @@ class MinMaxScaler(BasePreprocessor):
 
 if __name__ == "__main__":
     from sklearn.preprocessing import MinMaxScaler as MMS
+
     X = [[-1, 2],
          [-0.5, 6],
          [0, 10],
