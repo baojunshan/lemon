@@ -10,4 +10,4 @@ from ._min_max_scaler import MinMaxScaler
 from ._standard_scaler import StandardScaler
 from ._robust_scaler import RobustScaler
 from ._ordinal_encoder import OrdinalEncoder
-
+from ._ploynomial_features import PloynomialFeatures
