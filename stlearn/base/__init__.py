@@ -24,7 +24,12 @@ class BasePreprocessor:
             if k in self.__dict__:
                 self.__dict__[k] = v
 
-    def _check_trans_input(self, x):
+    def _check_type(self, x):
+        if not isinstance(x, (pd.DataFrame, np.ndarray, list)):
+            raise TypeError("{}'s input should be pandas dataframe or numpy array!".format(self.__class__.__name__))
+        return True
+
+    def _to_numpy(self, x):
         if isinstance(x, pd.DataFrame):
             return x.to_numpy()
         if isinstance(x, np.ndarray):

@@ -1,15 +1,27 @@
 from stlearn.base import BasePreprocessor
+import numpy as np
 
 
 class LabelEncoder(BasePreprocessor):
     def __init__(self):
-        pass
+        self.classes_ = None
 
     def fit(self, x):
-        pass
+        self._check_type(x)
+        self.classes_ = np.unique(x)
+        return self
 
     def transform(self, x):
-        pass
+        x = self._to_numpy(x)
+        return np.array([list(self.classes_).index(v) for v in x])
 
     def fit_transform(self, x):
-        pass
+        return self.fit(x).transform(x)
+
+
+if __name__ == "__main__":
+    le = LabelEncoder()
+    le.fit(["a", "b", "c"])
+
+    print(le.classes_)
+    print(le.transform(["a", "b", "c"]))

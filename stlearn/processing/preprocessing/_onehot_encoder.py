@@ -32,10 +32,12 @@ class OneHotEncoder(BasePreprocessor):
             return
 
     def fit(self, x):
+        self._check_type(x)
         self._update_categories(x)
         return self
 
     def transform(self, x):
+        x = self._to_numpy(x)
         ret = list()
         for line in x:
             line_onehot = list()
@@ -86,9 +88,14 @@ if __name__ == "__main__":
     X = [['Male', 1], ['Female', 3], ['Female', 2]]
     enc.fit(X)
     print(enc.transform([['Female', 1], ['Male', 4]]))
-
     print(enc.inverse_transform([[0, 1, 1, 0, 0], [0, 0, 0, 1, 0]]))
-
     print(enc.get_feature_names(["gender", "group"]))
+
+    from sklearn.preprocessing import OneHotEncoder as OE
+    oe = OE(handle_unknown='ignore')
+    oe.fit(X)
+    print(oe.transform([['Female', 1], ['Male', 4]]).toarray())
+    print(oe.inverse_transform([[0, 1, 1, 0, 0], [0, 0, 0, 1, 0]]))
+    print(oe.get_feature_names(["gender", "group"]))
 
 
