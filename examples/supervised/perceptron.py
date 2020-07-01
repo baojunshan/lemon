@@ -1,5 +1,5 @@
-from stlearn.supervised.linear_model import Perceptron
-from stlearn.datasets import load_breast_cancer
+from lemon.supervised.linear_model import Perceptron
+from lemon.datasets import load_breast_cancer
 import numpy as np
 
 x, y = load_breast_cancer(x_y=True)

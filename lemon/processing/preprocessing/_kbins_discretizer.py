@@ -1,8 +1,8 @@
 import numpy as np
-from stlearn.base import BasePreprocessor
-from stlearn.processing.preprocessing._onehot_encoder import OneHotEncoder
+from lemon.base import BasePreprocessor
+from lemon.processing.preprocessing._onehot_encoder import OneHotEncoder
 
-# from stlearn.cluster import KMeans
+# from lemon.cluster import KMeans
 
 
 class KBinsDiscretizer(BasePreprocessor):

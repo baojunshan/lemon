@@ -64,11 +64,10 @@
 
 ## 2.无监督学习 unsupervised
 
-- cluster
-    - Birch
-    - DBSCAN
-    - KMeans
-    - AgglomerativeClustering
+- Birch
+- DBSCAN
+- KMeans
+- AgglomerativeClustering
 - pagerank
 
 

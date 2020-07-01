@@ -1,4 +1,4 @@
-from stlearn.base import BaseClassifierModel
+from lemon.base import BaseClassifierModel
 import numpy as np
 import multiprocessing as mp
 

@@ -28,7 +28,7 @@
 # print(np.array(b).round(12))
 # print(b.round(12) == x)
 #
-# from stlearn import ab
+# from lemon import ab
 # import os, sys
 # print(os.getcwd())
 

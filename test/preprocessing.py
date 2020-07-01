@@ -1,4 +1,4 @@
-from stlearn.processing.preprocessing import Binarizer, FunctionTransformer
+from lemon.processing.preprocessing import Binarizer, FunctionTransformer
 
 
 def call_name(func):

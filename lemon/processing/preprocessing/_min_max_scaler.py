@@ -1,4 +1,4 @@
-from stlearn.base import BasePreprocessor
+from lemon.base import BasePreprocessor
 
 import numpy as np
 
