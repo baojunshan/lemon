@@ -37,3 +37,37 @@ class BasePreprocessor:
         if isinstance(x, list):
             return np.array(x)
         raise TypeError("{}'s input should be pandas dataframe or numpy array!".format(self.__class__.__name__))
+
+
+class BaseClassifierModel:
+    @abstractmethod
+    def fit(self, x, y):
+        pass
+
+    @abstractmethod
+    def predict(self, x):
+        pass
+
+    def get_params(self):
+        return self.__dict__
+
+    def set_params(self, **params):
+        for k, v in params.items():
+            if k in self.__dict__.keys():
+                print(k, v)
+                self.__dict__[k] = v
+
+    @staticmethod
+    def score(y_true, y_pred):
+        return sum(y_true == y_pred) / len(y_true)
+
+    def _to_numpy(self, x):
+        if isinstance(x, pd.DataFrame):
+            return x.to_numpy()
+        if isinstance(x, np.ndarray):
+            return x
+        if isinstance(x, list):
+            return np.array(x)
+        raise TypeError("{}'s input should be pandas dataframe or numpy array!"\
+                        .format(self.__class__.__name__))
+
