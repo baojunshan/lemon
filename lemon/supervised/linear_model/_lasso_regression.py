@@ -1,8 +1,8 @@
-from lemon.base import BaseClassifierModel
+from lemon.base import BaseModel
 import numpy as np
 
 
-class LassoRegressionGD(BaseClassifierModel):
+class LassoRegressionGD(BaseModel):
     def __init__(self, lr=0.01, alpha=0.5, max_iter=10000):
         self.alpha = alpha
         self.max_iter = max_iter
@@ -13,7 +13,7 @@ class LassoRegressionGD(BaseClassifierModel):
     @staticmethod
     def _l1_grad(w):
         w[w > 0] = 1
-        w[2 < 0] = -1
+        w[w < 0] = -1
         return w
 
     def _sgd(self, x, y):
@@ -34,7 +34,7 @@ class LassoRegressionGD(BaseClassifierModel):
 
 
 if __name__ == "__main__":
-    X = np.array([[1, 1], [1, 2], [2, 2], [2, 3]])
+    X = np.array([[5, 1], [4, 2], [2, 2], [2, 3]])
     y = np.array([2, 3, 4, 5])
     print(y)
     model = LassoRegressionGD(alpha=0.01).fit(X, y)

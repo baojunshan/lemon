@@ -1,5 +1,6 @@
 from lemon.supervised.linear_model import Perceptron
 from lemon.datasets import load_breast_cancer
+from lemon.model_utils.metrics import accuracy
 import numpy as np
 
 x, y = load_breast_cancer(x_y=True)
@@ -13,12 +14,12 @@ print(test_x)
 model = Perceptron(verbose=True)
 model.fit(train_x, train_y)
 pred_y = model.predict(test_x)
-print(model.score(test_y, pred_y))
+print(accuracy(test_y, pred_y))
 
 
 from sklearn.linear_model.perceptron import Perceptron as P
 m = P(verbose=True)
 m.fit(train_x, train_y)
 p = model.predict(test_x)
-print(model.score(test_y, p))
+print(accuracy(test_y, p))
 

@@ -1,8 +1,8 @@
-from lemon.base import BaseClassifierModel
+from lemon.base import BaseModel
 import numpy as np
 
 
-class RidgeRegression(BaseClassifierModel):
+class RidgeRegression(BaseModel):
     def __init__(self, alpha=0.1):
         self.alpha = alpha
         self.w = None
@@ -29,7 +29,7 @@ class RidgeRegression(BaseClassifierModel):
         return None
 
 
-class RidgeRegressionGD(BaseClassifierModel):
+class RidgeRegressionGD(BaseModel):
     def __init__(self, max_iter=10000, lr=0.01, alpha=0.1):
         self.max_iter = max_iter
         self.lr = lr

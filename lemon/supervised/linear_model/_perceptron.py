@@ -1,9 +1,9 @@
-from lemon.base import BaseClassifierModel
+from lemon.base import BaseModel
 import numpy as np
 import multiprocessing as mp
 
 
-class Perceptron(BaseClassifierModel):
+class Perceptron(BaseModel):
     def __init__(self,
                  max_iter=1000,
                  tol=0,

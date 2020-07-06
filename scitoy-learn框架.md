@@ -9,6 +9,7 @@
     - LassoRegressionGD
     - ElasticNetGD
     - LogisticRegression
+    - maximum_entropy
     
 - svm
     - Kernel
@@ -28,16 +29,9 @@
     - MultinomialNB
 
 - neighbors
-    - DistanceMetric
+    - DistanceMetrics
     - KDTree
-    - BallTree
-    - NearestNeighbors
-    - NearestCentroid
-    - KNeighborsClassifier
-    - KNeighborsRegression
-    - RadiusNeighborsClassifier
-    - RadiusNeighborsRegression
-    - LocalOutlierFactor
+    - KNearestNeighbors
     
 - crf
 - hmm

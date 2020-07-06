@@ -16,7 +16,7 @@
 - [ ] supervised
     - [x] linear_model
     - [ ] naive_bayes
-    - [ ] neighbors
+    - [x] neighbors
     - [ ] svm
     - [ ] tree
     - [ ] hmm

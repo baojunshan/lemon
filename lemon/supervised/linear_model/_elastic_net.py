@@ -1,8 +1,8 @@
-from lemon.base import BaseClassifierModel
+from lemon.base import BaseModel
 import numpy as np
 
 
-class ElasticNetGD(BaseClassifierModel):
+class ElasticNetGD(BaseModel):
     def __init__(self, lr=0.01, alpha=0.4, max_iter=10000):
         self.alpha = alpha
         self.max_iter = max_iter
@@ -13,7 +13,7 @@ class ElasticNetGD(BaseClassifierModel):
     @staticmethod
     def _l1_grad(w):
         w[w > 0] = 1
-        w[2 < 0] = -1
+        w[w < 0] = -1
         return w
 
     def _sgd(self, x, y):
@@ -22,7 +22,7 @@ class ElasticNetGD(BaseClassifierModel):
             p = x @ w + b
             w -= (x.T @ (p - y) / x.shape[0]
                   + self.alpha * self._l1_grad(w)
-                  + (1 - self.alpha) * self.w) * self.lr
+                  + (1 - self.alpha) * w) * self.lr
             b -= np.sum((p - y)) / x.shape[0] * self.lr
         return w, b
 

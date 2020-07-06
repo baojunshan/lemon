@@ -1,8 +1,8 @@
-from lemon.base import BaseClassifierModel
+from lemon.base import BaseModel
 import numpy as np
 
 
-class LinearRegression(BaseClassifierModel):
+class LinearRegression(BaseModel):
     def __init__(self):
         self.w = None
 
@@ -28,7 +28,7 @@ class LinearRegression(BaseClassifierModel):
         return None
 
 
-class LinearRegressionGD(BaseClassifierModel):
+class LinearRegressionGD(BaseModel):
     def __init__(self, max_iter=10000, lr=0.01):
         self.max_iter = max_iter
         self.lr = lr
