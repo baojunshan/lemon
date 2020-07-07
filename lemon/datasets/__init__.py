@@ -5,7 +5,8 @@ __all__ = [
     "load_iris",
     "load_boston",
     "load_breast_cancer",
-    "load_wine"
+    "load_wine",
+    "load_titanic"
 ]
 
 CURR_FOLDER_PATH = PurePath(__file__).parent
@@ -33,3 +34,7 @@ def load_breast_cancer(x_y=False):
 
 def load_wine(x_y=False):
     return _load_data(str(CURR_FOLDER_PATH / "wine.pkl"), x_y)
+
+
+def load_titanic(x_y=False):
+    return _load_data(str(CURR_FOLDER_PATH / "titanic.pkl"), x_y)

@@ -47,9 +47,42 @@ from sklearn.datasets import load_breast_cancer, load_boston, load_wine
 
 from sklearn.datasets import load_iris
 
+#
+# data = load_iris(True)
+# print(data)
 
-data = load_iris(True)
-print(data)
+# from lemon.datasets import load_iris
+#
+# print(load_iris())
+#
+# import pandas as pd
+# import numpy as np
+#
+# df = pd.read_csv("./test/train.csv")
+#
+# target_names = ["survived", "unsurvived"]
+# target = np.array(df["Survived"].tolist())
+#
+# df = df[df.columns.difference(["Survived"])]
+#
+# feature_names = df.columns.tolist()
+# DESCR = "Titanic datasets from kaggle"
+# data = df.to_numpy()
+#
+# dataset = {
+#     "feature_names": feature_names,
+#     "DESCR": DESCR,
+#     "data": data,
+#     "target_names": target_names,
+#     "target": target
+# }
+# import pickle
+# print(dataset)
+# with open("lemon/datasets/titanic.pkl", "wb") as f:
+#     pickle.dump(dataset, f)
 
+from lemon.datasets import load_titanic
 
-
+x, y = load_titanic(True)
+print(x)
+print(y)
