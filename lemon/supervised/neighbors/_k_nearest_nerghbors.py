@@ -68,9 +68,28 @@ class KNearestNeighbors(BaseModel):
         return
 
 
+class KNearestNeighborsClassifier(KNearestNeighbors):
+    def __init__(self, n_neighbors=20, algorithm="auto",
+                 leaf_size=30, distance_type=2):
+        super(KNearestNeighborsClassifier, self).__init__(n_neighbors=n_neighbors,
+                                                          algorithm=algorithm,
+                                                          leaf_size=leaf_size,
+                                                          distance_type=distance_type,
+                                                          mode="classifier")
+
+
+class KNearestNeighborsRegression(KNearestNeighbors):
+    def __init__(self, n_neighbors=20, algorithm="auto",
+                 leaf_size=30, distance_type=2):
+        super(KNearestNeighborsRegression, self).__init__(n_neighbors=n_neighbors,
+                                                          algorithm=algorithm,
+                                                          leaf_size=leaf_size,
+                                                          distance_type=distance_type,
+                                                          mode="regression")
+
+
 if __name__ == "__main__":
     x = np.array([[1, 2], [1, 2], [2, 2], [4, 10]])
     y = np.array([1, 1, 2, 5])
     model = KNearestNeighbors(n_neighbors=2, algorithm="kd_tree", mode="regression").fit(x, y)
     print(model.predict([[1, 1]]))
-
