@@ -24,8 +24,6 @@
     
 - naive_bayes
     - GaussianNB
-    - BernoulliNB
-    - CategoricalNB
     - MultinomialNB
 
 - neighbors

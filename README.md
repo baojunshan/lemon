@@ -15,7 +15,7 @@
     - [ ] pipeline
 - [ ] supervised
     - [x] linear_model
-    - [ ] naive_bayes
+    - [x] naive_bayes
     - [x] neighbors
     - [ ] svm
     - [ ] tree
