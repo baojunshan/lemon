@@ -19,7 +19,7 @@ def train_test_split(*arrays, split_rate=0.75, random_state=2020, shuffle=True):
         for d in data:
             random.seed(random_state)
             random.shuffle(d)
-    ret = []
+    ret = list()
     for d in data:
         ret.append(d[:int(d.shape[0] * split_rate)])
         ret.append(d[int(d.shape[0] * split_rate):])

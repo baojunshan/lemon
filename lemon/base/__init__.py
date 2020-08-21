@@ -44,6 +44,12 @@ class BasePreprocessor:
         return _to_numpy(x)
 
 
+BaseImputer = BasePreprocessor
+
+
+BaseDecompositor = BasePreprocessor
+
+
 class BaseModel:
     @abstractmethod
     def fit(self, x, y):

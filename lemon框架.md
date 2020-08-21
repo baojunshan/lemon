@@ -12,11 +12,8 @@
     - maximum_entropy
     
 - svm
-    - Kernel
     - SVC
     - SVM
-    - LinearSVC
-    - LinearSVR
 
 - tree
     - DecisionTreeClassifier
@@ -49,7 +46,6 @@
     - StackingRegression
     - VotingClassifier
     - VotingRegression
-- net
 
 
 
@@ -93,7 +89,6 @@
     - StandardScaler
 - impute
     - SimpleImputer
-    - KNNImputer
 
 
 ## 4.特征选择与评估 feature_utils
@@ -106,42 +101,15 @@
 ## 5.模型选择与评估 model_utils
 
 - metrics
-    - (classification)
     - accuracy
-    - auc
     - precision
     - recall
-    - classification_report
-    - cohen_cappa_score
-    - confusion_matrix
-    - dcg_score
     - f1_score
-    - fbeta_score
-    - jaccard_score
-    - precision_recall_curve
-    - roc_auc_score
-    - roc_curve
-    - hamming_loss
-    - hinge_loss
-    - zero_one_loss
-    - (regression)
-    - max_error
-    - mean_absolute_error
-    - mean_square_error
-    - mean_square_log_error
-    - median_absolute_error
-    - r2_score
-    - (cluster)
-    - silhouette_score
+    - f_beta_score
+    - auc
+    - ks
+
 - model_selection
     - train_test_split
-    - KFold
-    - LeaveOneOut
-    - ShuffleSpilt
-    - TimeSeriesSplit
-    - GridSearchCV
-    - RandomizedSearchCV
-- pipeline
-    - FeatureUnion
-    - Pipeline
+   
 

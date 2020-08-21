@@ -81,8 +81,13 @@ from sklearn.datasets import load_iris
 # with open("lemon/datasets/titanic.pkl", "wb") as f:
 #     pickle.dump(dataset, f)
 
-from lemon.datasets import load_titanic
+# from lemon.datasets import load_titanic
+#
+# x, y = load_titanic(True)
+# print(x)
+# print(y)
 
-x, y = load_titanic(True)
-print(x)
-print(y)
+from sklearn.metrics import classification_report
+
+c = classification_report([1, 0, 0], [1, 0, 1])
+print(c)

@@ -3,26 +3,25 @@
 
 # 当前进度
 - [x] datasets
-- [ ] processing
+- [x] processing
     - [x] preprocessing
-    - [ ] decomposition
-    - [ ] impute
+    - [x] decomposition
+    - [x] impute
 - [ ] feature_utils
     - [ ] feature_selection
-- [ ] model_utils
-    - [ ] metrics
-    - [ ] model_selection
-    - [ ] pipeline
+- [x] model_utils
+    - [x] metrics
+    - [x] model_selection
 - [ ] supervised
     - [x] linear_model
     - [x] naive_bayes
     - [x] neighbors
     - [ ] svm
-    - [ ] tree
+    - [ ] em
+    - [x] tree
     - [ ] hmm
     - [ ] crf
     - [ ] ensemble
-    - [ ] net
 - [ ] semi_supervised
     - [ ] label_propagation
     - [ ] louvain
