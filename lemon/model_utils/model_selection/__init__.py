@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import random
 
+from ._psi import psi
+
 
 def _to_numpy(x):
     if isinstance(x, pd.DataFrame):

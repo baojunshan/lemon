@@ -95,8 +95,7 @@
 
 - feature_selection
     - VarianceThreshold
-    - chi2
-    - IV
+    - woe_iv
 
 ## 5.模型选择与评估 model_utils
 
@@ -111,5 +110,6 @@
 
 - model_selection
     - train_test_split
+    - psi
    
 
