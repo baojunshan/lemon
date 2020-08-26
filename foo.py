@@ -87,7 +87,20 @@ from sklearn.datasets import load_iris
 # print(x)
 # print(y)
 
-from sklearn.metrics import classification_report
+# from sklearn.metrics import classification_report
+#
+# c = classification_report([1, 0, 0], [1, 0, 1])
+# print(c)
 
-c = classification_report([1, 0, 0], [1, 0, 1])
-print(c)
+def batch(x):
+    for i in x:
+        yield i
+
+
+a = [1,2,3]
+k = batch(a)
+for j in range(10):
+    try:
+        print(next(k))
+    except:
+        k = batch(a)
