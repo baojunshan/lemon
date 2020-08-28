@@ -33,12 +33,10 @@
 - ensemble
     - AdaBoostClassifier
     - AdaBoostRegression
-    - BaggingClassifier
-    - BaggingRegression
-    - GradientBoostingClassifier
-    - GradientBoostingRegression
     - RandomForestClassifier
     - RandomForestRegression
+    - GradientBoostingClassifier
+    - GradientBoostingRegression
     - HistGradientBoostingClassifier
     - HistGradientBoostingRegression
     - IsolationForest
@@ -48,16 +46,13 @@
     - VotingRegression
 
 
-
-
 ## 2.无监督学习 unsupervised
 
-- Birch
 - DBSCAN
-- KMeans
-- AgglomerativeClustering
-- pagerank
-
+- KMeans 
+    - KMeans
+    - KMeans++
+    - MiniBatchKMeans
 
 
 ## 3.半监督 semi_supervised
@@ -65,13 +60,15 @@
 - label_propagation
 - label_spreading
 - louvain
+- pagerank
+    - pagerank
+    - personalized-pagerank
 
 
 
 ## 3.数据处理 processing
 
 - decomposition
-    - FactorAnalysis
     - PCA
     - SVD
 - preprocessing

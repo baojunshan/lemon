@@ -7,8 +7,8 @@
     - [x] preprocessing
     - [x] decomposition
     - [x] impute
-- [ ] feature_utils
-    - [ ] feature_selection
+- [x] feature_utils
+    - [x] feature_selection
 - [x] model_utils
     - [x] metrics
     - [x] model_selection
@@ -17,7 +17,6 @@
     - [x] naive_bayes
     - [x] neighbors
     - [ ] svm
-    - [ ] em
     - [x] tree
     - [ ] hmm
     - [ ] crf
@@ -25,9 +24,8 @@
 - [ ] semi_supervised
     - [ ] label_propagation
     - [ ] louvain
-- [ ] unsupervised
-    - [ ] birch
-    - [ ] dbscan
-    - [ ] kmeans
     - [ ] pagerank
+- [x] unsupervised
+    - [x] dbscan
+    - [x] kmeans
 
